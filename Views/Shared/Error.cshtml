@@ -5,9 +5,10 @@
 
 <h1 class="text-danger">Error.</h1>
 <h2 class="text-danger">An error occurred while processing your request.</h2>
-<environment include="Development,Staging"> message here</environment>
+
 @if (Model.ShowRequestId)
 {
+    <environment include="Development,Staging"> message here</environment>
     <p>
         <strong>Request ID:</strong> <code>@Model.RequestId</code>
     </p>
