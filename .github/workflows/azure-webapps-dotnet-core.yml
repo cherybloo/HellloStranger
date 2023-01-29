@@ -81,6 +81,9 @@ jobs:
           name: .net-app
       - name: Azure Login
         uses: Azure/actions/login@v1
+        with:
+          creds: ${{secrets.MSDN_SECRET}}
+          
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
