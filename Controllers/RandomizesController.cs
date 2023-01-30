@@ -25,7 +25,20 @@ namespace Danger.Controllers
         {
               return View(await _context.Randomize.ToListAsync());
         }
+        
+        //GET: SearchForm
+        public async Task<IActionResult> SearchForm()
+        {
+              return View();
+        }
+        
+        public IActionResult SearchResult(String Searching)
+        {
+            return View("",await _context.Where(Searching)Randomize.ToListAsync());
+        }
 
+        
+        
         // GET: Randomizes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
